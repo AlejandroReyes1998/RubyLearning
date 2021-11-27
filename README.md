@@ -14,5 +14,14 @@ rails routes
 ### Crear scaffold para crear modelo de base de datos
 rails g scaffold registros nombre:string apellido:string correo:string telefono:string usuario:string
 
-### Integrar scaffold a la aplicaciòn
+### Integrar scaffold a la aplicación
 rails db:migrate
+
+### Actualizar compilado de gemas
+bundle install
+
+### Añadir vistas necesarias para gem devise
+rails g devise:views
+
+### Añadir base usada para gem devise
+rails generate devise MODEL
