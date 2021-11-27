@@ -2,5 +2,10 @@
 
 <%= render 'form', registro: @registro %>
 
-<%= link_to 'Mostrar registro', @registro %> |
-<%= link_to 'Regresar', registros_path %>
+<br>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-light"><%= link_to 'Mostrar registro', @registro %> </button>
+  <button type="button" class="btn btn-light"><%= link_to 'Regresar', registros_path %></button>
+</div>
+

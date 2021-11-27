@@ -1,29 +1,16 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @registro.nombre %>
-</p>
+  <br>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @registro.nombre %> <%= @registro.apellido %></h1>
+  <hr class="my-4">
+  <p><%= @registro.correo %> ■ <%= @registro.telefono %> ■ @<%= @registro.usuario %></p>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @registro.apellido %>
-</p>
+  <br>
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-light"><%= link_to 'Editar registro', edit_registro_path(@registro) %> </button>
+  <button type="button" class="btn btn-light"><%= link_to 'Regresar', registros_path %></button>
+  </div>
+</div>
 
-<p>
-  <strong>Correo:</strong>
-  <%= @registro.correo %>
-</p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @registro.telefono %>
-</p>
 
-<p>
-  <strong>Usuario:</strong>
-  <%= @registro.usuario %>
-</p>
-
-<%= link_to 'Editar registro', edit_registro_path(@registro) %> |
-<%= link_to 'Regresar', registros_path %>

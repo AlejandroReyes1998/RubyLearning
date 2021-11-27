@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Registros</h1>
 
-<table>
+<table class="table table-dark table-borderless">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -10,7 +8,7 @@
       <th>Correo</th>
       <th>Telefono</th>
       <th>Usuario</th>
-      <th colspan="3"></th>
+      <th colspan="3">Opciones</th>
     </tr>
   </thead>
 
@@ -21,10 +19,10 @@
         <td><%= registro.apellido %></td>
         <td><%= registro.correo %></td>
         <td><%= registro.telefono %></td>
-        <td><%= registro.usuario %></td>
-        <td><%= link_to 'Mostrar registro', registro %></td>
-        <td><%= link_to 'Editar registro', edit_registro_path(registro) %></td>
-        <td><%= link_to 'Eliminar registro', registro, method: :delete, data: { confirm: '¿Estás seguro de eliminar este registro?' } %></td>
+        <td>@<%= registro.usuario %></td>
+        <td><button type="button" class="btn btn-light"><%= link_to 'Mostrar registro', registro %></button></td>
+        <td><button type="button" class="btn btn-light"><%= link_to 'Editar registro', edit_registro_path(registro) %></button></td>
+        <td><button type="button" class="btn btn-light"><%= link_to 'Eliminar registro', registro, method: :delete, data: { confirm: '¿Estás seguro de eliminar este registro?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +30,6 @@
 
 <br>
 
-<%= link_to 'Dar de alta nuevo registro', new_registro_path %>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-light"><%= link_to 'Dar de alta nuevo registro', new_registro_path %> </button>
+</div>
